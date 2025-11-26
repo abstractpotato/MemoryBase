@@ -2,11 +2,14 @@ from sqlite3 import Error, connect
 from atexit import register
 from io import StringIO
 from traceback import format_exc
+from os import path, mkdir
 
 class MemoryBase:
 
     def __init__(self):
         self.connection = connect(":memory:", check_same_thread=False)
+        if not path.isdir("database"):
+            mkdir("database")
 
     def disk_load(self):
         disk_conn = connect("database/database.db")
@@ -21,7 +24,7 @@ class MemoryBase:
         return {"msg": "loaded from disk"}
 
     def disk_save(self):
-        disk_conn = connect("database/blockchain.db")
+        disk_conn = connect("database/database.db")
         self.connection.backup(disk_conn)
         disk_conn.close()
         return {"msg": "saved to disk"}
