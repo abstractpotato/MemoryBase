@@ -4,7 +4,7 @@ Simple single threaded database HTTP Server
 
 SQLite3 `:memory:` database wrapped with Flask
 
-  `/test/client.py` can be used as an example in python
+`/test/client.py` can be used as example code
 
 **Requirements:**
 ```
