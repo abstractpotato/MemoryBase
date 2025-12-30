@@ -4,7 +4,7 @@ def run(app, request):
     def execute():
         json = request.get_json()
         if "data" in json:
-            return app.database.execute(json["query"], json["data"])
+            return app.database.execute(json["query"], tuple(json["data"]))
         return app.database.execute(json["query"])
 
     @app.route("/load")
