@@ -4,9 +4,12 @@ Simple single threaded database HTTP Server
 
 SQLite3 `:memory:` database wrapped with Flask
 
+- `/test/client.py`
+
 **Requirements:**
 ```
 pip install Flask
+pip install requests
 ```
 
 **Endpoints:**
