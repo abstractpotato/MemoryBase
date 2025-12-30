@@ -1,6 +1,6 @@
 # MemoryBase
 
-Simple single threaded database for small projects
+Simple single threaded database HTTP Server
 
 SQLite3 `:memory:` database wrapped with Flask
 
