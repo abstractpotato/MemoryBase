@@ -19,8 +19,9 @@ def timeit(func):
 host = "http://localhost:1430"
 
 @timeit
-def execute(query):
-    text = requests.post(f'{host}/execute', json={"query": query}).text
+def execute(query, data=()):
+    json_data = {"query": query, "data": data}
+    text = requests.post(f'{host}/execute', json=json_data).text
     return json.loads(text)
 
 @timeit
