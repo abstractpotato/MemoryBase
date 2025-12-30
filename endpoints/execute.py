@@ -2,7 +2,10 @@ def run(app, request):
 
     @app.route("/execute", methods=["POST"])
     def execute():
-        return app.database.execute(request.get_json()["query"])
+        json = request.get_json()
+        if "data" in json:
+            return app.database.execute(json["query"], json["data"])
+        return app.database.execute(json["query"])
 
     @app.route("/load")
     def load():

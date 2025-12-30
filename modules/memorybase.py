@@ -33,10 +33,10 @@ class MemoryBase:
         print(self.disk_save())
         self.connection.close()
 
-    def execute(self, query):
+    def execute(self, query, data=()):
         try:
             cursor = self.connection.cursor()
-            result = cursor.execute(query)
+            result = cursor.execute(query, data)
             if "SELECT" not in query and "PRAGMA" not in query:
                 self.connection.commit()
                 return []
