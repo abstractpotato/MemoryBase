@@ -12,7 +12,7 @@ pip install Flask
 **Endpoints:**
 | METHOD | ENDPOINT | DESCRIPTION | JSON |
 | --- | --- | --- | --- |
-| `POST` | `/execute` | execute query | `{query str, data list}` |
-| `GET` | `/load` | loads database from drive | `[]` |
-| `GET` | `/save` | saves `:memory:` database to drive | `[]` |
-| `GET` | `/tables` | get database tables | `[]` |
+| `POST` | `/execute` | execute SQL query | `{query str, data list}` |
+| `GET` | `/load` | loads database from drive | `NULL` |
+| `GET` | `/save` | saves `:memory:` database to drive | `NULL` |
+| `GET` | `/tables` | get database tables | `NULL` |

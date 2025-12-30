@@ -1,5 +1,4 @@
 from sqlite3 import Error, connect
-from atexit import register
 from io import StringIO
 from traceback import format_exc
 from os import path, mkdir
