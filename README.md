@@ -4,13 +4,17 @@ Simple single threaded database HTTP Server
 
 SQLite3 `:memory:` database wrapped with Flask
 
-[/test/client.py](https://github.com/abstractpotato/MemoryBase/blob/main/tests/client.py) can be used as example code
+View [/test/client.py](https://github.com/abstractpotato/MemoryBase/blob/main/tests/client.py) for a simple implementation in Python
 
 ---
 
 **Requirements:**
 ```
 pip install Flask
+```
+
+Requires `requests` for `/test/client.py`
+```
 pip install requests
 ```
 
