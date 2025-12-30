@@ -6,11 +6,15 @@ SQLite3 `:memory:` database wrapped with Flask
 
 [/test/client.py](https://github.com/abstractpotato/MemoryBase/blob/main/tests/client.py) can be used as example code
 
+---
+
 **Requirements:**
 ```
 pip install Flask
 pip install requests
 ```
+
+---
 
 **Endpoints:**
 | METHOD | ENDPOINT | DESCRIPTION | JSON |
