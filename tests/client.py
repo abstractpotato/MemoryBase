@@ -26,18 +26,15 @@ def execute(query, data=()):
 
 @timeit
 def load():
-    text = requests.get(f'{host}/load').text
-    return json.loads(text)
+    return json.loads(requests.get(f'{host}/load').text)
 
 @timeit
 def save():
-    text = requests.get(f'{host}/save').text
-    return json.loads(text)
+    return json.loads(requests.get(f'{host}/save').text)
 
 @timeit
 def tables():
-    text = requests.get(f'{host}/tables').text
-    return json.loads(text)
+    return json.loads(requests.get(f'{host}/tables').text)
 
 @timeit
 def table_cols(table_name):
